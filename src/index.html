@@ -7,6 +7,7 @@
     <meta name="keywords" content="Password Generator, Gerador de Senhas, Gerador de senhas fortes">
     <title>Password Generator</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./public/fav.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -14,18 +15,18 @@
         Password Generator
     </h1>
     <main class="container-input">
-        <span>Password Size: <span id="value">10</span></span>
+        <span>Password Size: <span id="value"></span></span>
         <input id="slider" class="slider" type="range" min="5" max="25" value="10">
-        <button id="button" class="button-cta">Generate</button>
+        <button id="button" class="button-cta" onclick="generatePassword()">Generate</button>
     </main>
 
-    <div id="container-password" class="container-password hide">
+    <div id="container-password" class="container-password hide" onclick="copyToClipBoard()">
         <span class="title">Your password is: </span>
-        <span id="password" class="password">123123123</span>
-        <span class="tooltip">Click to copy.</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip">Click to copy 👆</span>
     </div>
 
-    <script type="module" src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
